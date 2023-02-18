@@ -7,33 +7,22 @@
  */
 int main(void)
 {
-	int i, j, k;
+	int i = 48;
 
-	for (i = 0; i <= 9; i++)
+	while (i < 58)
 	{
-		for (j = i + 1; j <= 9; j++)
-		{
-			for (k = j + 1; k <= 9; k++)
-			{
-				putchar(i + '0');
-				putchar(',');
-				putchar(' ');
-				putchar(j + '0');
-				putchar(',');
-				putchar(' ');
-				putchar(k + '0');
+		putchar(i);
 
-				if (i == 7 && j == 8 && k == 9)  /* last combination */
-				{
-					putchar('\n');
-				}
-				else
-				{
-					putchar(',');
-					putchar(' ');
-				}
-			}
+		if (i != 57)
+		{
+			putchar(',');
+			putchar(' ');
 		}
+		else
+		{
+			putchar('\n');
+		}
+		i++;
 	}
 	return (0);
 }
