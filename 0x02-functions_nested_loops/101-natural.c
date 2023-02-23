@@ -25,7 +25,7 @@ int main(void)
 		}
 	}
 
-	printf("%d is the sum of all multiples of 3 or 5 below 1024.\n", sum);
+	printf("%d\n", sum);
 
 	return (0);
 }
