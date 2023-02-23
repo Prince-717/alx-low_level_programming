@@ -13,7 +13,7 @@ int main(void)
 	a = 1; /* First Fibonacci number */
 	b = 2; /* Second Fibonacci number */
 	mod2 = b % 2; /* Even Fibonacci number check */
-	sum = mod2; /* Initializing sum of even numbers */
+	sum = b; /* Initializing sum of even numbers */
 
 	do {
 		fnum = a + b; /* Fibonacci number = some of 2 preceding numbers*/
