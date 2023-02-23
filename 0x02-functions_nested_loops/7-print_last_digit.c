@@ -4,9 +4,9 @@
 /**
  * print_last_digit - Print the last digit of a number
  *
- * @num : Number whose last digit is to be found
+ * @r : Number whose last digit is to be found
  *
- * Return: 0 if Success
+ * Return: r if Success
  */
 
 int print_last_digit(int r)
@@ -16,6 +16,8 @@ int print_last_digit(int r)
 		r = -r;
 
 		r = r % 10;
+
+		_putchar(r + '0');
 
 		return (r);
 	}
