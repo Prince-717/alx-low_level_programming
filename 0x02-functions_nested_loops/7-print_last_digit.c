@@ -9,26 +9,23 @@
  * Return: 0 if Success
  */
 
-int print_last_digit(int num)
+int print_last_digit(int r)
 {
-	int n;
-
-	if (num < 0)
+	if (r < 0)
 	{
-		num = -num;
+		r = -r;
 
-		n = num % 10;
+		r = r % 10;
 
-		_putchar(n + '0');
-
-		return (n);
+		return (r);
 	}
 	else
 	{
-		n = num % 10;
+		r = r % 10;
 
-		_putchar(n + '0');
+		_putchar(r + '0');
+
+		return (r);
 	}
 
-	return (0);
 }
