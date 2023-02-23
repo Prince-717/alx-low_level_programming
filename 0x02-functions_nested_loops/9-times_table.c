@@ -1,10 +1,8 @@
 #include <stdio.h>
 #include "main.h"
-
 /**
  * times_table - Print the 9 times table
  */
-
 void times_table(void)
 {
 	int k, n, r, fd, ld;
@@ -14,7 +12,6 @@ void times_table(void)
 		for (n = 0; n < 10; n++)
 		{
 			r = k * n;
-
 			fd = r / 10; /* 1st digit of r */
 			ld = r % 10; /* last digit of r */
 
@@ -27,11 +24,18 @@ void times_table(void)
 			{
 				_putchar(r + '0');
 			}
-
-			if (n != 9)
+			if (n < 9)
 			{
 				_putchar(',');
-				_putchar(' ');
+				if (r > 9)
+				{
+					_putchar(' ');
+				}
+				if (r <= 9)
+				{
+					_putchar(' ');
+					_putchar(' ');
+				}
 			}
 			else
 			{
