@@ -25,7 +25,14 @@ int main(void)
 		}
 		else if (mod5 == 0)
 		{
-			printf("Buzz ");
+			if (n != 100)
+			{
+				printf("Buzz ");
+			}
+			else
+			{
+				printf("Buzz");
+			}
 		}
 		else if (mod3 == 0)
 		{
