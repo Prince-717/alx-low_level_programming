@@ -2,9 +2,9 @@
 #include "main.h"
 
 /**
- * print_square - Prints square as # 
+ * print_square - Prints square as #
  *
- * @n: Size or number of squares
+ * @size: Size or number of squares
  */
 
 void print_square(int size)
