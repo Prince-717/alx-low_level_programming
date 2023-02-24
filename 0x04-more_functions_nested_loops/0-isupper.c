@@ -3,7 +3,9 @@
 
 /**
  * _isupper - Check for uppercase character
- * 
+ *
+ * @c: Character whose case if to be checked
+ *
  * Return: 0 on Success
  */
 
