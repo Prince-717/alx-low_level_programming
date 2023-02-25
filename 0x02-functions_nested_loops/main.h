@@ -25,4 +25,6 @@ void times_table(void);
 
 void jack_bauer(void);
 
+void print_times_table(int n);
+
 #endif /* MAIN_H */
