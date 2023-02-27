@@ -17,9 +17,7 @@ void print_rev(char *s)
 		i++;
 	}
 
-	li = i;
-
-	printf("%d", li);
+	li = i + 1;
 
 	while (li >= 0)
 	{
