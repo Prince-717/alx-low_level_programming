@@ -2,12 +2,12 @@
 #include "main.h"
 
 /**
- * print_rev - Write a function that prints a string in reverse
+ * rev_string - Write a function that prints a string in reverse
  *
  * @s: Parameter
  */
 
-void print_rev(char *s)
+void rev_string(char *s)
 {
 	int i = 0;
 	int li; /* Index of '\0' character in the string */
