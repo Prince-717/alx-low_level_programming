@@ -25,7 +25,7 @@ char *_strchr(char *s, char c)
 		if (*(s + i) == c && o < 1)
 		{
 			o++;
-			return (&s[i]);
+			return (s + i);
 
 		}
 
