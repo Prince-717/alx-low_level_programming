@@ -1,50 +1,24 @@
-#include <stdlib.h>
-#include <stdio.h>
+#include "main.h"
 
 /**
- * _strpbrk - Function that locates a character in a string.
+ * _strpbrk - searches a string for any of a set of bytes
+ * @s: string to search through
+ * @accept: set of bytes to search for
  *
- * @s: Pointer to string.
- * @accept: Character to be located.
- *
- * Return: Pointer to the first occurence of character c.
+ * Return: pointer to the byte in s that matches one of the bytes in accept
+ *         or NULL if no such byte is found
  */
-
 char *_strpbrk(char *s, char *accept)
 {
-	int ls = 0; /* Length of string s points to */
-	int la = 0; /* Length of string accept points to */
-	int i = 0; /* Loop variable for string that s points to */
-	int j = 0; /* Loop variable for string that accept points to */
-	/*int o = 0;  Variable to check the occurence of c */
+	int i, j;
 
-	while (*(s + ls) != '\0')
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		ls++;
-	}
-
-	while (*(accept + la) != '\0')
-	{
-		la++;
-	}
-
-	while (i < ls)
-	{
-		while (j < la)
+		for (j = 0; accept[j] != '\0'; j++)
 		{
 			if (s[i] == accept[j])
-			{
-				return (&s[i]);
-			}
-			j++;
+				return (s + i);
 		}
-
-		if (s[i] != accept[j - 1] && j == la)
-		{
-			return (NULL);
-		}
-
-		i++;
 	}
-	return (s);
+	return (NULL);
 }
