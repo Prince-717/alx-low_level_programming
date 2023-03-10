@@ -14,7 +14,6 @@ int main(int argc, char *argv[])
 {
 	int i;
 	int sum = 0;
-	int asci;
 
 	if (argc == 1)
 	{
@@ -23,9 +22,7 @@ int main(int argc, char *argv[])
 
 	for (i = 1; i < argc; i++)
 	{
-		asci = (int) *argv[i];
-
-		if (asci < 48 || asci > 57)
+		if (*argv[i] < '0' || *argv[i] > '9')
 		{
 			printf("Error\n");
 
