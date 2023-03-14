@@ -24,14 +24,14 @@ char *_strdup(char *str)
 		l++;
 	}
 
-	ptr = malloc(sizeof(char) * l);
+	ptr = malloc(sizeof(char) * (l + 1));
 
 	if (ptr == NULL)
 	{
 		return (NULL);
 	}
 
-	while (i <= l + 1)
+	while (i < l)
 	{
 		*(ptr + i) = *(str + i);
 
