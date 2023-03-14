@@ -14,18 +14,21 @@ char *create_array(unsigned int size, char c)
 	char *ptr;
 	unsigned int i = 0;
 
-	ptr = malloc(size * sizeof(char));
+	if (size == 0)
+	{
+		return (NULL);
+	}
+
+	ptr = malloc(size * sizeof(char)); /* allocate memory with malloc */
+
+	if (ptr == NULL) /* return null if memory allocationis invalid */
+	{
+		return (NULL);
+	}
 
 	while (i < size)
 	{
-		if (size == 0)
-		{
-			return (NULL);
-		}
-		else
-		{
-			ptr[i] = c;
-		}
+		ptr[i] = c;
 
 		i++;
 	}
