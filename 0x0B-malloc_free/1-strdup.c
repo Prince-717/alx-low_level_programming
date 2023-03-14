@@ -31,7 +31,7 @@ char *_strdup(char *str)
 		return (NULL);
 	}
 
-	while (i <= l)
+	while (i <= l + 1)
 	{
 		*(ptr + i) = *(str + i);
 
