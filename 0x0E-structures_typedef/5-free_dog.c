@@ -5,6 +5,7 @@
  * free_dog - Frees the memory of dog struct.
  * @d: dog to free
  */
+
 void free_dog(dog_t *d)
 {
 	free(d->owner);
