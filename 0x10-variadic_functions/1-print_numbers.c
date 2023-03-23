@@ -2,30 +2,27 @@
 #include <stdio.h>
 
 /**
- * print_numbers - Print stings followed by a new line.
+ * print_numbers - prints numbers, followed by a new line.
  *
- * @separator: String to be printed between strings.
- * @n: Number of strings passed to the function.
+ * @separator: the string to be printed between numbers.
+ * @n: the number of integers passed to the function.
+ * Return: nothing.
  */
-
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
-	const unsigned int *p = &n;
-	int num = *p, i;
+	unsigned int i;
 	va_list args;
 
 	va_start(args, n);
 
-	if (separator != NULL)
+	for (i = 0; i < n; i++)
 	{
-		for (i = 0; i < num; i++)
+		printf("%d", va_arg(args, int));
+		if (i != n - 1 && separator != NULL)
 		{
-			if (i < (num - 1))
-				printf("%d%s", va_arg(args, int), separator);
-			else
-				printf("%d\n", va_arg(args, int));
+			printf("%s", separator);
 		}
 	}
-
 	va_end(args);
+	printf("\n");
 }
