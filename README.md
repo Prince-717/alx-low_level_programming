@@ -1,0 +1,1 @@
+This repository contains C files illustrating the use of variables, conditionals, functions, nested loops, pointers, arrays, strings, recursion, static libraries, argc, argv, dynamic memory allocation using malloc, structures, typedef, function pointers and variadic functions.
