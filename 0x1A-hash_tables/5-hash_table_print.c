@@ -6,19 +6,19 @@
  */
 void hash_table_print(const hash_table_t *ht)
 {
-	char *deliminator = "";
+	char *d = "";
 	unsigned long int index;
-	hash_node_t *ptr_hash_table = NULL;
+	hash_node_t *t = NULL;
 
 	if (ht == NULL)
 		return;
 	putchar('{');
 	for (index = 0; index < ht->size; index++)
 	{
-		for (ptr_hash_table = ht->array[index]; ptr_hash_table != NULL; ptr_hash_table = ptr_hash_table->next)
+		for (t = ht->array[index]; t != NULL; t = t->next)
 		{
-			printf("%s'%s': '%s'", deliminator, ptr_hash_table->key, ptr_hash_table->value);
-			deliminator = ", ";
+			printf("%s'%s': '%s'", d, t->key, t->value);
+			d = ", ";
 		}
 	}
 	puts("}");
