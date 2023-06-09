@@ -139,7 +139,7 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 	if (key == NULL || *key == '\0')
 		return (0);
 
-	k_index = k_index((unsigned char *)key, ht->size);
+	k_index = key_index((unsigned char *)key, ht->size);
 
 	new = add_n_shash(&(ht->array[k_index]), key, value);
 
@@ -169,7 +169,7 @@ char *shash_table_get(const shash_table_t *ht, const char *key)
 	if (key == NULL || *key == '\0')
 		return (NULL);
 
-	k_index = k_index((unsigned char *)key, ht->size);
+	k_index = key_index((unsigned char *)key, ht->size);
 
 	temp = ht->array[k_index];
 
